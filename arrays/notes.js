@@ -60,5 +60,27 @@ body: "I would like to go to Araku"
 const index =notes1.findIndex(function (note,index){
     console.log(note)
     return note.title === 'Habbits to work on';
-})
-console.log(index)
+});
+console.log(index);
+//finding an object with required title in array of objects using findIndex() method
+// const findNote= function(notes,noteTitle){
+// const index= notes.findIndex(function(note,index){
+//     //using toLowerCase() method to make caseinsensitive search
+//     return note.title.toLowerCase()===noteTitle.toLowerCase();
+
+// })
+// return notes[index];
+// }
+//finding an object with required title in array of objects using find() method
+//find() method wil return object if found or undefined if it is not found
+const findNote= function(notes,noteTitle){
+    const note= notes.find(function(note,index){
+        //using toLowerCase() method to make caseinsensitive search
+        return note.title.toLowerCase()===noteTitle.toLowerCase();
+    
+    })
+    return note;
+    }
+const note=findNote(notes1,"habbits to work on")
+console.log("after findNote()");
+console.log(note);
