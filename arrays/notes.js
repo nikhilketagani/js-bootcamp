@@ -39,3 +39,26 @@ for(let count=0;count<3;count++){
 for(let count=notes.length-1;count>=0;count--){
     console.log(notes[count]);
 }
+
+//indexof() method --valid case
+console.log(notes.indexOf('Note 3'))
+
+//indexof() method --invalid case
+console.log(notes.indexOf('Note 2'))
+
+const notes1=[{
+title: "My next trip",
+body: "I would like to go to Araku"
+},{
+    title: "Habbits to work on",
+    body: "Excercise, Eating a bit better"
+},{
+    title: "Office Modification",
+    body: "Get a new chair"
+}];
+//finding an item in array of objects
+const index =notes1.findIndex(function (note,index){
+    console.log(note)
+    return note.title === 'Habbits to work on';
+})
+console.log(index)
