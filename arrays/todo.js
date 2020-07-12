@@ -76,8 +76,8 @@ const sortTodos =function(todos){
         }if(a.completed && !b.completed){
             return 1;
         }
-        if (a.text > b.text) return 1;
-	if (a.text < b.text) return -1;
+        if (a.text.toLowerCase() > b.text.toLowerCase()) return 1;
+	if (a.text.toLowerCase() < b.text.toLowerCase()) return -1;
 
 
     });
