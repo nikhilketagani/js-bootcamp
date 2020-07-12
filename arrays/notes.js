@@ -84,3 +84,21 @@ const findNote= function(notes,noteTitle){
 const note=findNote(notes1,"habbits to work on")
 console.log("after findNote()");
 console.log(note);
+//using filter() method
+const filteredNotes= notes1.filter(function(note,index){
+const isTitleMatch =note.title.toLowerCase().includes('xt');
+const isBodyMatch =note.body.toLocaleLowerCase().includes('xt');
+return isTitleMatch || isBodyMatch;
+    //return note.title.includes('to') || note.body.includes('to')
+});
+console.log(filteredNotes);
+const findNotes= function(notes1, query){
+    const filteredNotes= notes1.filter(function(note,index){
+        const isTitleMatch =note.title.toLowerCase().includes(query.toLowerCase());
+        const isBodyMatch =note.body.toLowerCase().includes(query.toLowerCase());
+        return isTitleMatch || isBodyMatch;
+            //return note.title.includes('to') || note.body.includes('to')
+        });
+        return filteredNotes;
+}
+console.log(findNotes(notes1,'xt'))
