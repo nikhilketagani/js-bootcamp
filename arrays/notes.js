@@ -91,7 +91,7 @@ const isBodyMatch =note.body.toLocaleLowerCase().includes('xt');
 return isTitleMatch || isBodyMatch;
     //return note.title.includes('to') || note.body.includes('to')
 });
-console.log(filteredNotes);
+//console.log(filteredNotes);
 const findNotes= function(notes1, query){
     const filteredNotes= notes1.filter(function(note,index){
         const isTitleMatch =note.title.toLowerCase().includes(query.toLowerCase());
