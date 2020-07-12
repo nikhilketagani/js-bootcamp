@@ -33,16 +33,16 @@ for(let count=0;count<todos.length;count++){
 //1.convert array to array of objects => text, completed
 const todos1=[
 {
-text:'1.wake up 5 am',
+text:'wake up 5 am',
 completed:false
 },
-{text:'2.Go for jogging',
+{text:'Go for jogging',
 completed:true},
-{text:'3.meditate for 30 mins',
+{text:'meditate for 30 mins',
 completed:false},
-{text:'4.eat breakfast',
+{text:'eat breakfast',
 completed:false},
-{text:'5.start the work',
+{text:'start the work',
 completed:true}];
 //2.create a function to remove a todo by text value
 const deleteTodo= function(todos,text){
@@ -65,3 +65,23 @@ return todos.filter(function(todo,index){
 })
 }
 console.log(getThingsTodo(todos1))
+//Sort todos based completed or not..ones those are not completed will be seen on top
+//if two of compared objects have completed as false then alphabatecally sorted
+//https://gomakethings.com/sorting-an-array-by-multiple-criteria-with-vanilla-javascript/
+const sortTodos =function(todos){
+    todos.sort(function(a,b){
+        if(!a.completed && b.completed){
+            
+            return -1;
+        }if(a.completed && !b.completed){
+            return 1;
+        }
+        if (a.text > b.text) return 1;
+	if (a.text < b.text) return -1;
+
+
+    });
+
+}
+sortTodos(todos1);
+console.log(todos1)
