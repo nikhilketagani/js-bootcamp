@@ -58,3 +58,10 @@ const deleteTodo= function(todos,text){
 console.log(todos1)
 deleteTodo(todos1,'5.start the work')
 console.log(todos1)
+//create a function that retun todos that are yet to be don based on completed 
+const getThingsTodo=function(todos){
+return todos.filter(function(todo,index){
+    return !todo.completed
+})
+}
+console.log(getThingsTodo(todos1))
