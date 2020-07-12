@@ -16,7 +16,16 @@ console.log(todos)
 
 //1. the first item
 //2. the second item
+//forEach loop
 todos.forEach(function(item,index){
     console.log(`${index+1}. ${item}`)
 });
 
+//for loop
+//documentation
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+
+for(let count=0;count<todos.length;count++){
+    let num=count+1;
+    console.log(`${num}. ${todos[count]}`)
+}
