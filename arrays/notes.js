@@ -101,4 +101,23 @@ const findNotes= function(notes1, query){
         });
         return filteredNotes;
 }
-console.log(findNotes(notes1,'xt'))
+console.log(findNotes(notes1,'xt'));
+console.log('a' <'b')
+console.log('march' <'jan')
+console.log('a' <'A')
+const sortNotes =function(notes){
+    notes.sort(function(a,b){
+        if(a.title.toLowerCase() < b.title.toLowerCase()){
+            return -1;
+        }else if(b.title.toLowerCase() < a.title.toLowerCase()){
+            return 1;
+        }else{
+            return 0;
+        }
+
+    });
+
+}
+console.log(notes1);
+sortNotes(notes1);
+console.log(notes1);
